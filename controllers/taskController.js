@@ -19,6 +19,7 @@ const listTask = async (req, res) => {
 
     res.status(200).json({
       "is_error": false,
+      "message":"Request Successful.",
       tasks,
       currentPage: page,
       totalPages: Math.ceil(totalTasks / limit)
@@ -47,6 +48,7 @@ const createTask = async (req, res) => {
 
     res.status(200).json({
       "is_error": false,
+      "message":"Request Successful.",
       "task": task
     })
   } catch (error) {
@@ -82,6 +84,7 @@ const updateTask = async (req, res) => {
 
     res.status(200).json({
       "is_error": false,
+      "message":"Request Successful.",
       "task": task
     })
   } catch (error) {
@@ -107,6 +110,7 @@ const getTaskById = async (req, res) => {
 
     res.status(200).json({
       "is_error": false,
+      "message":"Request Successful.",
       "task":task
     });
   } catch (error) {

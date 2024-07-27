@@ -21,7 +21,7 @@ const signupUser = async (req, res) => {
     }).lean(true)
 
     if (existingUser) {
-      res.status(403)
+      res.status(404)
       return res.json({
         "is error ": true,
         "message": 'A user with this email address already exists. Please add different email address.'
@@ -40,6 +40,7 @@ const signupUser = async (req, res) => {
       res.status(200).json(
         {
           "is_error":false,
+          "message":"User registered successfully.",
           "user":{
             _v: newUser._v,
             firstName: newUser.firstName,
@@ -102,6 +103,7 @@ const loginUser = async (req, res) => {
     res.status(200).json(
       {
         "is_error":false,
+        "message":"Logged in successfully.",
         "user":{
           _v: user._v,
           firstName: user.firstName,

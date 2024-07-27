@@ -23,7 +23,6 @@ const authenticateUser = (allowedRoles = []) => {
       .where('user').equals(decodedToken.userId);
 
       if(!userData){
-        console.log("here");
         return res.status(401).json({ message: 'Unauthorized. Invalid token.' });
       }
       req.user = decodedToken;

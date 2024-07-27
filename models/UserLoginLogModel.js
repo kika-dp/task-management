@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-// @ts-ignore
 const userLoginLogsSchema = mongoose.Schema(
   {
     accessToken: {
